@@ -15,7 +15,7 @@ SPIDER_MODULES = ['jt.spiders']
 NEWSPIDER_MODULE = 'jt.spiders'
 
 FEED_EXPORT_ENCODING = 'utf-8'
-
+# LOG_LEVEL='INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'jt (+http://www.yourdomain.com)'
@@ -66,9 +66,9 @@ FEED_EXPORT_ENCODING = 'utf-8'
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'jt.pipelines.JtPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#    'jt.pipelines.JtPipeline': 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

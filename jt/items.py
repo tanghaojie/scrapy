@@ -9,6 +9,7 @@ import scrapy
 
 
 class eyouItem(scrapy.Item):
+    region = scrapy.Field()
     order = scrapy.Field()
     loc = scrapy.Field()
     name = scrapy.Field()

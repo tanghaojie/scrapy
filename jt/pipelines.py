@@ -12,14 +12,13 @@ class JtPipeline(object):
         self.file = open('result.json', 'wb')
 
     def process_item(self, item, spider):
-        line = json.dumps(dict(item),ensure_ascii=False).encode('utf-8')
-        line += ",\n"
+        line = (json.dumps(dict(item),ensure_ascii=False) + ',\n').encode('utf-8')
         self.file.write(line)
         return item
 
     def open_spider(self, spider):
-        self.file.write('[\n')
+        self.file.write('[\n'.encode('utf-8'))
 
     def close_spider(self, spider):
-        self.file.write(']')
+        self.file.write(']'.encode('utf-8'))
         self.file.close()
